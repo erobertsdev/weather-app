@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgb(87, 101, 230);
+	color: white;
+}
+
+.main {
+	font-size: 6em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	position: relative;
+}
+
+.snow {
+	background: url(./images/snow.png), url(./images/snow.png);
+	background-color: gray;
+	background-size: 100%, 80%;
+	background-repeat: repeat;
+	width: 100%;
+
+	animation: snow 15s infinite linear;
+}
+
+.rain {
+	background: url(./images/rain2.png);
+	background-color: gray;
+	background-size: 50%;
+	background-repeat: repeat;
+	width: 100%;
+
+	animation: rain 10s infinite linear;
+}
+
+.cloudy {
+	background: url(./images/cloud1.png), url(./images/cloud3.png);
+	background-position: center;
+	background-color: gray;
+
+	animation: clouds 30s infinite linear;
+}
+
+input {
+	font-size: 2.8rem;
+	outline: none;
+	width: 60%;
+	padding: 10px;
+	border: 2px solid lightgray;
+	border-radius: 15px;
+	height: 80px;
+}
+
+#search {
+	display: inline-block;
+	color: black;
+	font-size: 1.5rem;
+	background-color: lightgray;
+	padding: 25px 25px;
+	border: 2px solid darkgray;
+	border-radius: 15px;
+	box-shadow: 2px 2px 2px rgb(58, 58, 58);
+
+	transition: all .2s;
+}
+
+#search:hover {
+	cursor: pointer;
+	background-color: gray;
+	color: white;
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 5px black;
+}
+
+#search:active {
+	outline: none;
+	transform: translateY(-2px);
+	background-color: rgb(168, 168, 168);
+	box-shadow: 2px 2px 2px black;
+}
+
+.github {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1em;
+}
+
+.github:hover {
+}
+
+.fade-in {
+	animation: fadeIn 1s ease-in;
+}
+
+.fade-out {
+	display: none;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes snow {
+	0% {
+		background-position: 0px 0px, 150px -20px;
+	}
+	100% {
+		background-position: 120px 650px, 120px 350px;
+	}
+}
+
+@keyframes rain {
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: -10px 5000px;
+	}
+}
+
+@keyframes clouds {
+	0% {
+		background-position: 0px 0px, -400px 0px;
+	}
+	100% {
+		background-position: -20px 0px, 500px 0px;
+	}
+}
