@@ -90,7 +90,7 @@ let locationDisplay = document.getElementById('location-display');
 
 const search = async (location) => {
 	try {
-		const response = await axios.get('http://api.openweathermap.org/data/2.5/weather/', {
+		const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
 			params: {
 				appid: '2d67bc089943044e986c0d091fc1f083',
 				q: location
