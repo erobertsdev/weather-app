@@ -1,18 +1,39 @@
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Caveat", cursive, Arial, Helvetica, sans-serif;
+  font-weight: 700;
   background-color: #5765e6;
   color: white;
 }
 
 .main {
-  font-size: 6em;
+  font-size: 10em;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
   position: relative;
+}
+
+#location-display {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 2.5rem;
+}
+
+.location-name {
+  font-size: 4rem;
 }
 
 .snow {
@@ -25,9 +46,9 @@ body {
 }
 
 .rain {
-  background: url(./images/rain2.png);
+  background: url(./images/rain2.png), url(./images/rain2.png);
   background-color: gray;
-  background-size: 50%;
+  background-size: 100%, 80%;
   background-repeat: repeat;
   width: 100%;
   animation: rain 10s infinite linear;
@@ -40,10 +61,18 @@ body {
   animation: clouds 30s infinite linear;
 }
 
+.partly-cloudy {
+  background: url(./images/cloud3.png), url(./images/cloud2.png);
+  background-color: #80dbf1;
+  background-position: center, top;
+  background-repeat: no-repeat;
+}
+
 input {
+  margin: 20px;
   font-size: 2.8rem;
   outline: none;
-  width: 60%;
+  width: 60vw;
   padding: 10px;
   border: 2px solid lightgray;
   border-radius: 15px;
@@ -51,6 +80,7 @@ input {
 }
 
 #search {
+  margin: 20px;
   display: inline-block;
   color: black;
   font-size: 1.5rem;
@@ -77,10 +107,15 @@ input {
   box-shadow: 2px 2px 2px black;
 }
 
-.github {
+i {
   margin-top: 20px;
   text-align: center;
-  font-size: 1em;
+  font-size: 5rem;
+  transition: all 0.3s;
+}
+
+i:hover {
+  color: lightgray;
 }
 
 .fade-in {
@@ -88,6 +123,10 @@ input {
 }
 
 .fade-out {
+  display: none;
+}
+
+.hide {
   display: none;
 }
 
@@ -117,10 +156,10 @@ input {
 }
 @keyframes rain {
   0% {
-    background-position: 0px 0px;
+    background-position: 0px 0px, 20px 20px;
   }
   100% {
-    background-position: -10px 5000px;
+    background-position: -10px 5000px, 0px 4000px;
   }
 }
 @keyframes clouds {

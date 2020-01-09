@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/ea1a8cf193.js" crossorigin="anonymous"></script>
     <title>The Greatest Weather App You've Ever Seen</title>
 </head>
@@ -13,15 +14,15 @@
     <section class="main">
         <div>
             <form class="fade-in">
-                <label for="location" class="initial">What's the weather like in: </label>
-                <div id="location-display"></div>
+                <label for="location" class="initial">How's the weather in: </label>
+                <div id="location-display" class="hide"></div>
                 <input type="text" id="location" class="initial" placeholder="City or Zipcode">
                 <div>
                     <button id="search">Check Weather</button>
                 </div>
             </form>
             <div class="github">
-                <i class="fab fa-github-square fade-in"></i>
+                <a href="https://github.com/erobertsdev/weather-app" target="_blank"><i class="fab fa-github-square fade-in"></i></a>
             </div>
         </div>
     </section>
