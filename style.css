@@ -15,7 +15,7 @@ body {
 }
 
 .main {
-  font-size: 10em;
+  font-size: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,11 +61,29 @@ body {
   animation: clouds 30s infinite linear;
 }
 
-.partly-cloudy {
-  background: url(./images/cloud3.png), url(./images/cloud2.png);
+.storm {
+  background: url(./images/lightning2.png), url(./images/rain2.png), url(./images/rain2.png);
+  background-color: #181744;
+  background-size: 100%, 100%, 80%;
+  background-position: top;
+  background-repeat: no-repeat, repeat, repeat;
+  animation: storm 10s infinite linear;
+}
+
+.clear {
+  background: url(./images/cloud6.png), url(./images/cloud4.png), url(./images/sun1.png);
   background-color: #80dbf1;
-  background-position: center, top;
+  background-size: 30%, 40%;
   background-repeat: no-repeat;
+  animation: clear 30s infinite linear;
+}
+
+.mist {
+  background: url(./images/snow.png), url(./images/snow.png), url(./images/snow.png);
+  background-color: gray;
+  background-size: 10%, 10%, 10%;
+  background-repeat: repeat;
+  animation: mist 30s infinite linear;
 }
 
 input {
@@ -91,7 +109,6 @@ input {
   box-shadow: 2px 2px 2px #3a3a3a;
   transition: all 0.2s;
 }
-
 #search:hover {
   cursor: pointer;
   background-color: gray;
@@ -99,12 +116,13 @@ input {
   transform: translateY(-5px);
   box-shadow: 5px 5px 5px black;
 }
-
 #search:active {
-  outline: none;
   transform: translateY(-2px);
   background-color: #a8a8a8;
   box-shadow: 2px 2px 2px black;
+}
+#search:focus {
+  outline: 0;
 }
 
 i {
@@ -113,7 +131,6 @@ i {
   font-size: 5rem;
   transition: all 0.3s;
 }
-
 i:hover {
   color: lightgray;
 }
@@ -162,12 +179,60 @@ i:hover {
     background-position: -10px 5000px, 0px 4000px;
   }
 }
+@keyframes storm {
+  0% {
+    background-position: 0px 0px, 0px 0px, 20px 20px;
+  }
+  100% {
+    background-position: 0px 0px, -10px 5000px, 0px 4000px;
+  }
+}
 @keyframes clouds {
   0% {
     background-position: 0px 0px, -400px 0px;
   }
   100% {
     background-position: -20px 0px, 500px 0px;
+  }
+}
+@keyframes clear {
+  0% {
+    background-position: center right, bottom left, 0px 0px;
+  }
+  100% {
+    background-position: top left, center right, 0px 0px;
+  }
+}
+@keyframes mist {
+  0% {
+    background-position: top left, center right, bottom right;
+  }
+  100% {
+    background-position: bottom right, center left, top left;
+  }
+}
+@media all and (max-width: 1250px) {
+  input {
+    height: 60px;
+  }
+}
+@media all and (max-width: 750px) {
+  input {
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+  #search {
+    padding: 15px 15px;
+    font-size: 1.2rem;
+  }
+
+  #location-display {
+    font-size: 2rem;
+  }
+
+  i {
+    font-size: 3rem;
   }
 }
 
