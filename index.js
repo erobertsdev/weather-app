@@ -24,7 +24,6 @@ const initSearch = () => {
 			const windSpeedKph = Math.ceil(data.wind.speed * 1.609);
 			const description = `${data.weather[0].main}, ${data.weather[0].description}`;
 
-			// PUT ALL THESE IFS IN SEPARATE FUNCTION
 			if (description.includes('clear')) {
 				body.classList.add('clear');
 			}
@@ -32,13 +31,13 @@ const initSearch = () => {
 				body.classList.add('cloudy');
 			}
 			if (description.includes('thunderstorm')) {
-				body.main.classList.add('storm');
+				body.classList.add('storm');
 			}
 			if (description.includes('rain') || description.includes('drizzle')) {
-				body.main.classList.add('rain');
+				body.classList.add('rain');
 			}
 			if (description.includes('snow')) {
-				body.main.classList.add('snow');
+				body.classList.add('snow');
 			}
 			if (description.includes('mist') || description.includes('haze') || description.includes('fog')) {
 				body.classList.add('mist');
