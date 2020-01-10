@@ -140,6 +140,8 @@ input {
 }
 
 #current-location {
+  margin: 0 auto;
+  width: 300px;
   font-size: 2.5rem;
   z-index: 5;
 }
