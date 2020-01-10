@@ -1,4 +1,5 @@
 let searched;
+let body = document.querySelector('body');
 let main = document.querySelector('.main');
 
 const initSearch = () => {
@@ -25,22 +26,22 @@ const initSearch = () => {
 
 			// PUT ALL THESE IFS IN SEPARATE FUNCTION
 			if (description.includes('clear')) {
-				main.classList.add('clear');
+				body.classList.add('clear');
 			}
 			if (description.includes('clouds')) {
-				main.classList.add('cloudy');
+				body.classList.add('cloudy');
 			}
 			if (description.includes('thunderstorm')) {
-				main.classList.add('storm');
+				body.main.classList.add('storm');
 			}
 			if (description.includes('rain') || description.includes('drizzle')) {
-				main.classList.add('rain');
+				body.main.classList.add('rain');
 			}
 			if (description.includes('snow')) {
-				main.classList.add('snow');
+				body.main.classList.add('snow');
 			}
 			if (description.includes('mist') || description.includes('haze') || description.includes('fog')) {
-				main.classList.add('mist');
+				body.classList.add('mist');
 			}
 
 			for (let el of initialEls) {
@@ -146,22 +147,22 @@ currentLocation.addEventListener('click', () => {
 			const description = `${data.weather[0].main}, ${data.weather[0].description}`;
 
 			if (description.includes('clear')) {
-				main.classList.add('clear');
+				body.classList.add('clear');
 			}
 			if (description.includes('clouds')) {
-				main.classList.add('cloudy');
+				body.classList.add('cloudy');
 			}
 			if (description.includes('thunderstorm')) {
-				main.classList.add('storm');
+				body.classList.add('storm');
 			}
 			if (description.includes('rain') || description.includes('drizzle')) {
-				main.classList.add('rain');
+				body.classList.add('rain');
 			}
 			if (description.includes('snow')) {
-				main.classList.add('snow');
+				body.classList.add('snow');
 			}
 			if (description.includes('mist') || description.includes('haze') || description.includes('fog')) {
-				main.classList.add('mist');
+				body.classList.add('mist');
 			}
 
 			for (let el of initialEls) {
