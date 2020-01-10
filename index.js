@@ -5,6 +5,15 @@ const initSearch = () => {
 	let locationInput = document.getElementById('location');
 	let searchButton = document.getElementById('search');
 	let initialEls = document.querySelectorAll('.initial');
+	let currentLocation = document.getElementById('current-location');
+
+	currentLocation.addEventListener('click', () => {
+		navigator.geolocation.getCurrentPosition(function success(pos) {
+			let coords = pos.coords;
+			console.log(coords);
+		});
+		console.log(coords);
+	});
 
 	searchButton.addEventListener('click', async (e) => {
 		e.preventDefault();
@@ -23,6 +32,7 @@ const initSearch = () => {
 			const windSpeedKph = Math.ceil(data.wind.speed * 1.609);
 			const description = `${data.weather[0].main}, ${data.weather[0].description}`;
 
+			// PUT ALL THESE IFS IN SEPARATE FUNCTION
 			if (description.includes('clear')) {
 				main.classList.add('clear');
 			}
@@ -68,13 +78,14 @@ const initPage = () => {
 	main.innerHTML = `
 	<div>
             <form class="fade-in">
-                <label for="location" class="initial">How's the weather in: </label>
+                <label for="location" class="initial main-title">How's the weather in: </label>
                 <div id="location-display" class="hide"></div>
-                <input type="text" id="location" class="initial" placeholder="City or Zipcode" required>
-                <div>
-                    <button id="search">Check Weather</button>
-                </div>
-            </form>
+				<input type="text" id="location" class="initial" placeholder="City or Zipcode" required>
+				<div class="check">
+					<button id="search">Check Weather</button>
+				</div>
+			</form>
+			<p id="current-location" class="initial location-text">Use My Location</p>
             <div class="github">
                 <a href="https://github.com/erobertsdev/weather-app" target="_blank"><i class="fab fa-github-square fade-in"></i></a>
             </div>
