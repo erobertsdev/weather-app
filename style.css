@@ -13,7 +13,7 @@ body {
   background: url(./images/main-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .main {
@@ -25,7 +25,7 @@ body {
   text-align: center;
   height: 100vh;
   position: relative;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
 }
 
 #location-display {
@@ -102,6 +102,7 @@ input {
   outline: none;
   width: 60vw;
   padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 2px solid lightgray;
   border-radius: 15px;
   height: 80px;
