@@ -25,7 +25,7 @@ body {
   text-align: center;
   height: 100vh;
   position: relative;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 1px rgba(82, 82, 82, 0.9);
 }
 
 #location-display {
