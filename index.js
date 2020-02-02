@@ -2,24 +2,27 @@ const init = (() => {
 	let main = document.querySelector('.main');
 
 	main.innerHTML = `
-		<div>
-            <form class="fade-in">
-                <label for="location" class="initial main-title">How's the weather in: </label>
-                <div id="location-display" class="hide"></div>
-				<input type="text" id="location" class="initial" placeholder="City or Zipcode" required>
-				<div class="check">
-					<button id="search">Check Weather</button>
+		<div class="container">
+			<div class="content">
+				<form class="fade-in">
+					<label for="location" class="initial"><p class="main-title">How's the weather in: </p></label>
+					<div id="location-display" class="hide"></div>
+					<input type="text" id="location" class="initial" placeholder="City or Zipcode" required>
+					<div class="check">
+						<button id="search">Check Weather</button>
+					</div>
+				</form>
+				<p id="current-location" class="initial location-text fade-in">Use My Location</p>
+				<div class="github">
+					<a href="https://github.com/erobertsdev/weather-app" target="_blank"><i class="fab fa-github-square fade-in"></i></a>
 				</div>
-			</form>
-			<p id="current-location" class="initial location-text fade-in">Use My Location</p>
-            <div class="github">
-                <a href="https://github.com/erobertsdev/weather-app" target="_blank"><i class="fab fa-github-square fade-in"></i></a>
-            </div>
+			</div>
 		</div>
 		`;
 
 	let lat, lon, searched;
 	let locationDisplay = document.getElementById('location-display');
+	let backbox = document.querySelector('.container');
 
 	const search = async (location, lat, lon) => {
 		if (location !== '') {
@@ -107,6 +110,8 @@ const init = (() => {
 					<p class="fade-in">Conditions: ${description}</p>
 					`;
 		locationDisplay.classList.remove('hide');
+		backbox.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+		backbox.style.boxShadow = '5px 5px 10px rgba(29, 29, 29, 0)';
 		searched = true;
 	};
 

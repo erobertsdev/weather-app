@@ -10,15 +10,15 @@ body {
   margin: 0;
   font-family: "Fira Sans Condensed", sans-serif, Arial, Helvetica, sans-serif;
   font-weight: 700;
-  background: #06015b;
-  background-image: linear-gradient(0deg, #06015b 0%, #090979 35%, #0d0da6 100%);
+  background: #5854ad;
+  background-image: linear-gradient(0deg, #5854ad 0%, #9797f3 35%, #bbbbbb 100%);
   background-repeat: no-repeat;
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
 }
 
 .main {
   line-height: 70%;
-  font-size: 10vw;
+  font-size: 8em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,9 +37,90 @@ body {
   font-size: 2.5rem;
 }
 
+.container {
+  height: 70vh;
+  padding: 20px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 5px 5px 10px rgba(29, 29, 29, 0.8);
+}
+
+.main-title {
+  margin-top: 60px;
+}
+
 .location-name {
   font-size: 4rem;
   padding-bottom: 20px;
+}
+
+input {
+  margin: 20px;
+  font-size: 2.8rem;
+  outline: none;
+  width: 60vw;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid lightgray;
+  border-radius: 15px;
+  height: 70px;
+}
+
+#search {
+  margin: 20px;
+  display: inline-block;
+  color: black;
+  font-size: 1.5rem;
+  background-color: rgba(211, 211, 211, 0);
+  padding: 25px 25px;
+  border: 2px solid darkgray;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.2);
+  transition: all 0.2s;
+}
+#search:hover {
+  cursor: pointer;
+  background-color: #9797f3;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 5px 5px 5px black;
+}
+#search:active {
+  transform: translateY(-2px);
+  background-color: #5854ad;
+  box-shadow: 2px 2px 2px black;
+}
+#search:focus {
+  outline: 0;
+}
+
+.check {
+  line-height: 30%;
+}
+
+#current-location {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 2.5rem;
+  z-index: 5;
+}
+#current-location:hover {
+  cursor: pointer;
+  color: #9797f3;
+  transition: all 0.3s;
+}
+
+i {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 5rem;
+  transition: all 0.3s;
+}
+i:hover {
+  color: #9797f3;
 }
 
 .github {
@@ -94,73 +175,6 @@ body {
   background-size: 10%, 10%, 10%;
   background-repeat: repeat;
   animation: mist 30s infinite linear;
-}
-
-input {
-  margin: 20px;
-  font-size: 2.8rem;
-  outline: none;
-  width: 60vw;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid lightgray;
-  border-radius: 15px;
-  height: 80px;
-}
-
-#search {
-  margin: 20px;
-  display: inline-block;
-  color: black;
-  font-size: 1.5rem;
-  background-color: rgba(211, 211, 211, 0.8);
-  padding: 25px 25px;
-  border: 2px solid darkgray;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.8);
-  transition: all 0.2s;
-}
-#search:hover {
-  cursor: pointer;
-  background-color: gray;
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 5px black;
-}
-#search:active {
-  transform: translateY(-2px);
-  background-color: #a8a8a8;
-  box-shadow: 2px 2px 2px black;
-}
-#search:focus {
-  outline: 0;
-}
-
-.check {
-  line-height: 30%;
-}
-
-#current-location {
-  margin: 0 auto;
-  width: 300px;
-  font-size: 2.5rem;
-  z-index: 5;
-}
-#current-location:hover {
-  cursor: pointer;
-  color: #949494;
-  transition: all 0.3s;
-}
-
-i {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 5rem;
-  transition: all 0.3s;
-}
-i:hover {
-  color: #949494;
 }
 
 .fade-in {
@@ -239,15 +253,26 @@ i:hover {
     background-position: bottom right, center left, top left;
   }
 }
-@media all and (max-width: 1250px) {
+@media all and (max-width: 1450px) {
   input {
     height: 60px;
   }
+
+  .main-title {
+    font-size: 6rem;
+  }
+
+  #current-location {
+    font-size: 2rem;
+  }
 }
-@media all and (max-width: 750px) {
+@media all and (max-width: 1100px) {
   input {
     height: 50px;
-    font-size: 1.8rem;
+  }
+
+  .main-title {
+    font-size: 5rem;
   }
 
   #search {
@@ -255,18 +280,60 @@ i:hover {
     font-size: 1.2rem;
   }
 
+  i {
+    transform: translateY(-30px);
+  }
+}
+@media all and (max-width: 750px) {
+  .main-title {
+    font-size: 4rem;
+  }
+
+  input {
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  #search {
+    padding: 14px 14px;
+    font-size: 1.1rem;
+  }
+
   #location-display {
+    line-height: 120%;
     font-size: 2rem;
   }
 
+  #current-location {
+    font-size: 2rem;
+  }
+
+  .location-name {
+    font-size: 9vw;
+    padding-bottom: 10px;
+  }
+
   i {
-    font-size: 3rem;
+    font-size: 4rem;
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
   }
 }
 @media screen and (orientation: landscape) and (max-device-height: 640px) {
   .main {
     margin-top: 20px;
-    font-size: 8vw;
+    font-size: 3rem;
+  }
+
+  .main-title {
+    font-size: 4rem;
   }
 
   input {
@@ -298,6 +365,12 @@ i:hover {
 
   i {
     font-size: 2.5rem;
+    transform: translateY(5px);
+  }
+
+  .container {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
   }
 }
 
