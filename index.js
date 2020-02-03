@@ -51,6 +51,7 @@ const init = (() => {
 				return response.data;
 			} catch (error) {
 				locationDisplay.innerHTML = `<p class="fade-in">No location found, try again.</p>`;
+				backbox.style.height = '80vh';
 				locationDisplay.classList.remove('hide');
 				return;
 			}
@@ -65,15 +66,15 @@ const init = (() => {
 
 		const data = await search(searchLocation, lat, lon);
 		searchLocation = data.name;
-		const tempF = Math.ceil((data.main.temp - 273.15) * (9 / 5) + 32);
-		const tempC = Math.ceil(data.main.temp - 273.15);
-		const highF = Math.ceil((data.main.temp_max - 273.15) * (9 / 5) + 32);
-		const lowF = Math.ceil((data.main.temp_min - 273.15) * (9 / 5) + 32);
-		const highC = Math.ceil(data.main.temp_max - 273.15);
-		const lowC = Math.ceil(data.main.temp_min - 273.15);
+		const tempF = Math.round((data.main.temp - 273.15) * (9 / 5) + 32);
+		const tempC = Math.round(data.main.temp - 273.15);
+		const highF = Math.round((data.main.temp_max - 273.15) * (9 / 5) + 32);
+		const lowF = Math.round((data.main.temp_min - 273.15) * (9 / 5) + 32);
+		const highC = Math.round(data.main.temp_max - 273.15);
+		const lowC = Math.round(data.main.temp_min - 273.15);
 		const humidity = data.main.humidity;
-		const windSpeedMph = Math.floor(data.wind.speed);
-		const windSpeedKph = Math.ceil(data.wind.speed * 1.609);
+		const windSpeedMph = Math.round(data.wind.speed);
+		const windSpeedKph = Math.round(data.wind.speed * 1.609);
 		const description = `${data.weather[0].main}, ${data.weather[0].description}`;
 
 		if (description.includes('clear')) {
