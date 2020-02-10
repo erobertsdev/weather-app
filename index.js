@@ -1,3 +1,5 @@
+import { data } from './data.js';
+
 const init = (() => {
 	let main = document.querySelector('.main');
 
@@ -29,7 +31,7 @@ const init = (() => {
 			try {
 				const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
 					params: {
-						appid: '2d67bc089943044e986c0d091fc1f083',
+						appid: data.key,
 						q: location
 					}
 				});
@@ -43,7 +45,7 @@ const init = (() => {
 			try {
 				const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
 					params: {
-						appid: '2d67bc089943044e986c0d091fc1f083',
+						appid: data.key,
 						lat: lat,
 						lon: lon
 					}
