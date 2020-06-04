@@ -1,378 +1,374 @@
 a {
-  color: inherit;
+	color: inherit;
 }
 
 p {
-  margin: 0;
+	margin: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Fira Sans Condensed", sans-serif, Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  background: #5854ad;
-  background-image: linear-gradient(0deg, #5854ad 0%, #9797f3 35%, #bbbbbb 100%);
-  background-repeat: no-repeat;
-  color: white;
+	margin: 0;
+	font-family: "Fira Sans Condensed", sans-serif, Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	background: #5854ad;
+	background-image: linear-gradient(0deg, #5854ad 0%, #9797f3 35%, #bbbbbb 100%);
+	background-repeat: no-repeat;
+	color: white;
 }
 
 .main {
-  line-height: 70%;
-  font-size: 8em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  position: relative;
-  text-shadow: 1px 1px 1px rgba(82, 82, 82, 0.9);
+	line-height: 70%;
+	font-size: 8em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh;
+	position: relative;
+	text-shadow: 1px 1px 1px rgba(82, 82, 82, 0.9);
 }
 
 #location-display {
-  line-height: 3rem;
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.3);
-  font-size: 2.5rem;
+	line-height: 3rem;
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.3);
+	font-size: 2.5rem;
 }
 
 .container {
-  height: 70vh;
-  padding: 20px;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 5px 5px 10px rgba(29, 29, 29, 0.8);
+	height: fit-content;
+	padding: 20px;
+	width: 80%;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 5px 5px 10px rgba(29, 29, 29, 0.8);
 }
 
 .main-title {
-  margin-top: 60px;
+	margin-top: 60px;
 }
 
 .location-name {
-  font-size: 4rem;
-  padding-bottom: 20px;
+	font-size: 4rem;
+	padding-bottom: 20px;
 }
 
 input {
-  margin: 20px;
-  font-size: 2.8rem;
-  outline: none;
-  width: 60vw;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid lightgray;
-  border-radius: 15px;
-  height: 70px;
+	margin: 20px;
+	font-size: 2.8rem;
+	outline: none;
+	width: 60vw;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: 2px solid lightgray;
+	border-radius: 15px;
+	height: 70px;
 }
 
 #search {
-  margin: 20px;
-  display: inline-block;
-  color: black;
-  font-size: 1.5rem;
-  background-color: rgba(211, 211, 211, 0);
-  padding: 25px 25px;
-  border: 2px solid darkgray;
-  border-radius: 15px;
-  box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.2);
-  transition: all 0.2s;
+	margin: 20px;
+	display: inline-block;
+	color: black;
+	font-size: 1.5rem;
+	background-color: rgba(211, 211, 211, 0);
+	padding: 25px 25px;
+	border: 2px solid darkgray;
+	border-radius: 15px;
+	box-shadow: 2px 2px 2px rgba(58, 58, 58, 0.2);
+	transition: all 0.2s;
 }
 #search:hover {
-  cursor: pointer;
-  background-color: #9797f3;
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 5px 5px 5px black;
+	cursor: pointer;
+	background-color: #9797f3;
+	color: white;
+	transform: translateY(-5px);
+	box-shadow: 5px 5px 5px black;
 }
 #search:active {
-  transform: translateY(-2px);
-  background-color: #5854ad;
-  box-shadow: 2px 2px 2px black;
+	transform: translateY(-2px);
+	background-color: #5854ad;
+	box-shadow: 2px 2px 2px black;
 }
 #search:focus {
-  outline: 0;
+	outline: 0;
 }
 
 .check {
-  line-height: 30%;
+	line-height: 30%;
 }
 
 #current-location {
-  margin: 0 auto;
-  width: 300px;
-  font-size: 2.5rem;
-  z-index: 5;
+	margin: 0 auto;
+	width: 300px;
+	font-size: 2.5rem;
+	z-index: 5;
 }
 #current-location:hover {
-  cursor: pointer;
-  color: #9797f3;
-  transition: all 0.3s;
+	cursor: pointer;
+	color: #9797f3;
+	transition: all 0.3s;
 }
 
 i {
-  display: block;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 5rem;
-  transition: all 0.3s;
+	display: block;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 5rem;
+	transition: all 0.3s;
 }
 i:hover {
-  color: #9797f3;
-}
-
-.github {
-  height: 70px;
+	color: #9797f3;
 }
 
 .snow {
-  background: url(./images/snow.png), url(./images/snow.png);
-  background-color: gray;
-  background-size: 100%, 80%;
-  background-repeat: repeat;
-  width: 100%;
-  animation: snow 15s infinite linear;
+	background: url(./images/snow.png), url(./images/snow.png);
+	background-color: gray;
+	background-size: 100%, 80%;
+	background-repeat: repeat;
+	width: 100%;
+	animation: snow 15s infinite linear;
 }
 
 .rain {
-  background: url(./images/rain2.png), url(./images/rain2.png);
-  background-color: gray;
-  background-size: 100%, 80%;
-  background-repeat: repeat;
-  width: 100%;
-  animation: rain 10s infinite linear;
+	background: url(./images/rain2.png), url(./images/rain2.png);
+	background-color: gray;
+	background-size: 100%, 80%;
+	background-repeat: repeat;
+	width: 100%;
+	animation: rain 10s infinite linear;
 }
 
 .cloudy {
-  background: url(./images/cloud1.png), url(./images/cloud3.png);
-  background-position: center;
-  background-color: gray;
-  animation: clouds 30s infinite linear;
+	background: url(./images/cloud1.png), url(./images/cloud3.png);
+	background-position: center;
+	background-color: gray;
+	animation: clouds 30s infinite linear;
 }
 
 .storm {
-  background: url(./images/lightning2.png), url(./images/rain2.png), url(./images/rain2.png);
-  background-color: #181744;
-  background-size: 100%, 100%, 80%;
-  background-position: top;
-  background-repeat: no-repeat, repeat, repeat;
-  animation: storm 10s infinite linear;
+	background: url(./images/lightning2.png), url(./images/rain2.png), url(./images/rain2.png);
+	background-color: #181744;
+	background-size: 100%, 100%, 80%;
+	background-position: top;
+	background-repeat: no-repeat, repeat, repeat;
+	animation: storm 10s infinite linear;
 }
 
 .clear {
-  background: url(./images/cloud6.png), url(./images/cloud4.png), url(./images/sun1.png);
-  background-color: #80dbf1;
-  background-size: 30%, 40%;
-  background-repeat: no-repeat;
-  animation: clear 30s infinite linear;
+	background: url(./images/cloud6.png), url(./images/cloud4.png), url(./images/sun1.png);
+	background-color: #80dbf1;
+	background-size: 30%, 40%;
+	background-repeat: no-repeat;
+	animation: clear 30s infinite linear;
 }
 
 .mist {
-  background: url(./images/snow.png), url(./images/snow.png), url(./images/snow.png);
-  background-color: gray;
-  background-size: 10%, 10%, 10%;
-  background-repeat: repeat;
-  animation: mist 30s infinite linear;
+	background: url(./images/snow.png), url(./images/snow.png), url(./images/snow.png);
+	background-color: gray;
+	background-size: 10%, 10%, 10%;
+	background-repeat: repeat;
+	animation: mist 30s infinite linear;
 }
 
 .fade-in {
-  animation: fadeIn 1s ease-in;
+	animation: fadeIn 1s ease-in;
 }
 
 .fade-out {
-  display: none;
+	display: none;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 @keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 @keyframes snow {
-  0% {
-    background-position: 0px 0px, 150px -20px;
-  }
-  100% {
-    background-position: 120px 650px, 120px 350px;
-  }
+	0% {
+		background-position: 0px 0px, 150px -20px;
+	}
+	100% {
+		background-position: 120px 650px, 120px 350px;
+	}
 }
 @keyframes rain {
-  0% {
-    background-position: 0px 0px, 20px 20px;
-  }
-  100% {
-    background-position: -10px 5000px, 0px 4000px;
-  }
+	0% {
+		background-position: 0px 0px, 20px 20px;
+	}
+	100% {
+		background-position: -10px 5000px, 0px 4000px;
+	}
 }
 @keyframes storm {
-  0% {
-    background-position: 0px 0px, 0px 0px, 20px 20px;
-  }
-  100% {
-    background-position: 0px 0px, -10px 5000px, 0px 4000px;
-  }
+	0% {
+		background-position: 0px 0px, 0px 0px, 20px 20px;
+	}
+	100% {
+		background-position: 0px 0px, -10px 5000px, 0px 4000px;
+	}
 }
 @keyframes clouds {
-  0% {
-    background-position: 0px 0px, -400px 0px;
-  }
-  100% {
-    background-position: -20px 0px, 500px 0px;
-  }
+	0% {
+		background-position: 0px 0px, -400px 0px;
+	}
+	100% {
+		background-position: -20px 0px, 500px 0px;
+	}
 }
 @keyframes clear {
-  0% {
-    background-position: center right, bottom left, 0px 0px;
-  }
-  100% {
-    background-position: top left, center right, 0px 0px;
-  }
+	0% {
+		background-position: center right, bottom left, 0px 0px;
+	}
+	100% {
+		background-position: top left, center right, 0px 0px;
+	}
 }
 @keyframes mist {
-  0% {
-    background-position: top left, center right, bottom right;
-  }
-  100% {
-    background-position: bottom right, center left, top left;
-  }
+	0% {
+		background-position: top left, center right, bottom right;
+	}
+	100% {
+		background-position: bottom right, center left, top left;
+	}
 }
 @media all and (max-width: 1450px) {
-  input {
-    height: 60px;
-  }
+	input {
+		height: 60px;
+	}
 
-  .main-title {
-    font-size: 6rem;
-  }
+	.main-title {
+		font-size: 6rem;
+	}
 
-  #current-location {
-    font-size: 2rem;
-  }
+	#current-location {
+		font-size: 2rem;
+	}
 }
 @media all and (max-width: 1100px) {
-  input {
-    height: 50px;
-  }
+	input {
+		height: 50px;
+	}
 
-  .main-title {
-    font-size: 5rem;
-  }
+	.main-title {
+		font-size: 5rem;
+	}
 
-  #search {
-    padding: 15px 15px;
-    font-size: 1.2rem;
-  }
+	#search {
+		padding: 15px 15px;
+		font-size: 1.2rem;
+	}
 
-  i {
-    transform: translateY(-30px);
-  }
+	i {
+		transform: translateY(-30px);
+	}
 }
 @media all and (max-width: 750px) {
-  .main-title {
-    font-size: 4rem;
-    margin-top: 0px;
-  }
+	.main-title {
+		font-size: 4rem;
+		margin-top: 0px;
+	}
 
-  input {
-    height: 50px;
-    font-size: 1.8rem;
-  }
+	input {
+		height: 50px;
+		font-size: 1.8rem;
+	}
 
-  p {
-    font-size: 1.5rem;
-  }
+	p {
+		font-size: 1.5rem;
+	}
 
-  #search {
-    padding: 14px 14px;
-    font-size: 1.1rem;
-  }
+	#search {
+		padding: 14px 14px;
+		font-size: 1.1rem;
+	}
 
-  #location-display {
-    line-height: 120%;
-    font-size: 2rem;
-  }
+	#location-display {
+		line-height: 120%;
+		font-size: 2rem;
+	}
 
-  #current-location {
-    font-size: 2rem;
-  }
+	#current-location {
+		font-size: 2rem;
+	}
 
-  .location-name {
-    font-size: 9vw;
-    padding-bottom: 10px;
-  }
+	.location-name {
+		font-size: 9vw;
+		padding-bottom: 10px;
+	}
 
-  i {
-    font-size: 4rem;
-  }
+	i {
+		font-size: 4rem;
+	}
 
-  .container {
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
-  }
+	.container {
+		background-color: rgba(255, 255, 255, 0);
+		box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
+	}
 }
 @media screen and (orientation: landscape) and (max-device-height: 640px) {
-  .main {
-    margin-top: 20px;
-    font-size: 3rem;
-  }
+	.main {
+		margin-top: 20px;
+		font-size: 3rem;
+	}
 
-  .main-title {
-    font-size: 4rem;
-  }
+	.main-title {
+		font-size: 4rem;
+	}
 
-  input {
-    height: 40px;
-    font-size: 1.8rem;
-  }
+	input {
+		height: 40px;
+		font-size: 1.8rem;
+	}
 
-  .location-name {
-    font-size: 2rem;
-  }
+	.location-name {
+		font-size: 2rem;
+	}
 
-  .cloudy {
-    background-size: 100%, 100%;
-  }
+	.cloudy {
+		background-size: 100%, 100%;
+	}
 
-  #search {
-    padding: 15px 15px;
-    font-size: 1rem;
-  }
+	#search {
+		padding: 15px 15px;
+		font-size: 1rem;
+	}
 
-  #current-location {
-    font-size: 2rem;
-  }
+	#current-location {
+		font-size: 2rem;
+	}
 
-  #location-display {
-    line-height: 120%;
-    font-size: 1.2rem;
-  }
+	#location-display {
+		line-height: 120%;
+		font-size: 1.2rem;
+	}
 
-  i {
-    font-size: 2.5rem;
-    transform: translateY(5px);
-  }
+	i {
+		font-size: 2.5rem;
+		transform: translateY(5px);
+	}
 
-  .container {
-    background-color: rgba(255, 255, 255, 0);
-    box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
-  }
+	.container {
+		background-color: rgba(255, 255, 255, 0);
+		box-shadow: 5px 5px 10px rgba(29, 29, 29, 0);
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

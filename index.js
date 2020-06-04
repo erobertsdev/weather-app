@@ -28,6 +28,23 @@ const init = (() => {
 
 	const search = async (location, lat, lon) => {
 		if (location !== '') {
+			// Checks if input contains numbers and sends zip code request if true
+			if (/\d/.test(location)) {
+				try {
+					const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
+						params: {
+							appid: data.key,
+							zip: location
+						}
+					});
+					return response.data;
+				} catch (error) {
+					locationDisplay.innerHTML = `<p class="fade-in">No location found, try again.</p>`;
+					locationDisplay.classList.remove('hide');
+					return;
+				}
+			}
+			// Search using location name
 			try {
 				const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
 					params: {
@@ -42,6 +59,7 @@ const init = (() => {
 				return;
 			}
 		} else {
+			// Search using coordinates
 			try {
 				const response = await axios.get('https://api.openweathermap.org/data/2.5/weather/', {
 					params: {
